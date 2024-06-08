@@ -1,8 +1,8 @@
 # andreshung's .zshrc
 
 # aliases
-if [ -f ~/.aliases ]; then
-        . ~/.aliases
+if [ -f ~/.zsh_aliases ]; then
+        . ~/.zsh_aliases
 fi
 
 # shell prompt

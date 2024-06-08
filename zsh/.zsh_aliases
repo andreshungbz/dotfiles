@@ -1,0 +1,7 @@
+# ls
+alias l.='ls -d --color=auto .*'
+alias ll='ls -lh --color=auto'
+
+# cd
+alias cloud='cd /Users/andreshung/Library/Mobile\ Documents/com~apple~CloudDocs'
+alias aint='cd /Users/andreshung/Projects/ub/ub-aint/2023-2'
