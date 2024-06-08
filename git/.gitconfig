@@ -1,0 +1,6 @@
+[user]
+	name = Andres Hung
+	email = andres.hung@outlook.com
+[core]
+	autocrlf = input
+	editor = vim
