@@ -6,3 +6,8 @@
 [core]
 	autocrlf = input
 	editor = vim
+[pull]
+	rebase = false
+[alias]
+	unstage = restore --staged
+	last = log -1 HEAD
