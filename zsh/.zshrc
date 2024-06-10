@@ -5,12 +5,12 @@ if [ -f ~/.zsh_aliases ]; then
         . ~/.zsh_aliases
 fi
 
-# shell prompt
-autoload -Uz vcs_info
-precmd() { vcs_info }
-zstyle ':vcs_info:*' formats '%s(%F{yellow}%b%f) '
-setopt PROMPT_SUBST
-PS1='%F{yellow}%T%f %F{049}%n%f[%m] %1~ ${vcs_info_msg_0_}%# '
+# basic shell prompt
+# autoload -Uz vcs_info
+# precmd() { vcs_info }
+# zstyle ':vcs_info:*' formats '%s(%F{yellow}%b%f) '
+# setopt PROMPT_SUBST
+# PS1='%F{yellow}%T%f %F{049}%n%f[%m] %1~ ${vcs_info_msg_0_}%# '
 
 # antigen
 source /opt/homebrew/share/antigen/antigen.zsh
@@ -25,3 +25,6 @@ export PGDATA='/opt/homebrew/var/postgresql@16'
 path+=('/opt/homebrew/opt/postgresql@16/bin')
 path+=("/$HOME/bin")
 export PATH
+
+# starship
+eval "$(starship init zsh)"
