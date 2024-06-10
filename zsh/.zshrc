@@ -1,9 +1,27 @@
 # andreshung's .zshrc
 
+if [[ -f "/opt/homebrew/bin/brew" ]] then
+  # If you're using macOS, you'll want this enabled
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # aliases
 if [ -f ~/.zsh_aliases ]; then
         . ~/.zsh_aliases
 fi
+
+# history
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
 # basic shell prompt
 # autoload -Uz vcs_info
@@ -13,9 +31,9 @@ fi
 # PS1='%F{yellow}%T%f %F{049}%n%f[%m] %1~ ${vcs_info_msg_0_}%# '
 
 # antigen
-source /opt/homebrew/share/antigen/antigen.zsh
-antigen bundle sobolevn/wakatime-zsh-plugin
-antigen apply
+# source /opt/homebrew/share/antigen/antigen.zsh
+# antigen bundle sobolevn/wakatime-zsh-plugin
+# antigen apply
 
 # postgresql default user
 export PGUSER=postgres
