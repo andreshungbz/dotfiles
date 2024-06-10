@@ -1,0 +1,7 @@
+tap "homebrew/bundle"
+brew "fastfetch"
+brew "gcc"
+brew "neovim"
+brew "stow"
+brew "tldr"
+brew "tree"
