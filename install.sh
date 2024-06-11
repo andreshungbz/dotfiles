@@ -62,3 +62,7 @@ fi
 
 # link wakatime-cli to homebrew package for zsh
 mkdir ~/.wakatime && ln -s $(which wakatime-cli) ~/.wakatime/wakatime-cli 
+
+# add execute permissions to bin files
+source ./functions.sh
+exec_to_owner "~/bin"

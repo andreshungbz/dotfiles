@@ -109,6 +109,10 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # source alias
 alias src="source ~/.bashrc"
 
+# alias for giving all custom bin files execute permission
+source ~/dotfiles/functions.sh
+alias binex="exec_to_owner ~/bin && cd -"
+
 # extra aliases
 
 if [ -f ~/.bash_aliases ]; then
