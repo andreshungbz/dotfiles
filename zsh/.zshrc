@@ -9,22 +9,23 @@
 # setopt PROMPT_SUBST
 # PS1='%F{yellow}%T%f %F{049}%n%f[%m] %1~ ${vcs_info_msg_0_}%# '
 
-# enable homebrew for macOS
+# MAIN --------------------------------------------------------------
+
+# enable homebrew for macOS and linux systems
+
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# enable homebrew for linux
 if [[ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]] then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
-# starship zsh configuration
+# enable starship prompt with zsh configuration
 export STARSHIP_CONFIG=~/.config/starship-zsh.toml
-# enable starship prompt
 eval "$(starship init zsh)"
 
-# history
+# history settings
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
@@ -37,9 +38,25 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# ZINIT --------------------------------------------------------------
+# ALIASES -----------------------------------------------------------
 
-# zinit directory and plugins
+# eza ls alias
+alias ls="eza --icons=always"
+
+# enable zoxide with cd alias
+eval "$(zoxide init --cmd cd zsh)"
+
+# source alias
+alias src="source ~/.zshrc"
+
+# extra aliases
+if [ -f ~/.zsh_aliases ]; then
+        . ~/.zsh_aliases
+fi
+
+# ZINIT -------------------------------------------------------------
+
+# zinit directory
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 # download zinit
@@ -62,14 +79,7 @@ zinit light Aloxaf/fzf-tab
 autoload -Uz compinit && compinit
 zinit cdreplay -q
 
-# completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
-
-# FZF ----------------------------------------------------------------
+# FZF ---------------------------------------------------------------
 
 # fzf keybindings and fuzzy completion
 eval "$(fzf --zsh)"
@@ -112,10 +122,15 @@ _fzf_comprun() {
   esac
 }
 
-# aliases
-if [ -f ~/.zsh_aliases ]; then
-        . ~/.zsh_aliases
-fi
+# STYLING -----------------------------------------------------------
+
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
+
+# OTHER -------------------------------------------------------------
 
 # load nvm
 export NVM_DIR="$HOME/.nvm"

@@ -5,9 +5,3 @@ alias ll='ls -lh --color=auto'
 # cd
 alias cloud='cd /Users/andreshung/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias aint='cd /Users/andreshung/Projects/ub/ub-aint/2023-2'
-
-# eza ls alias
-alias ls="eza --icons=always"
-
-# zoxide and alias
-eval "$(zoxide init --cmd cd zsh)"
