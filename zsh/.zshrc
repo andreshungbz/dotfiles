@@ -9,13 +9,18 @@
 # setopt PROMPT_SUBST
 # PS1='%F{yellow}%T%f %F{049}%n%f[%m] %1~ ${vcs_info_msg_0_}%# '
 
-# starship prompt
-eval "$(starship init zsh)"
-
 # macOS
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+# linux
+if [[ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]] then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
+# starship prompt
+eval "$(starship init zsh)"
 
 # history
 HISTSIZE=5000
