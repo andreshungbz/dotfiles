@@ -125,5 +125,7 @@ export NVM_DIR="$HOME/.nvm"
 # wakatime for bash
 source ~/bash-wakatime.sh
 
+# starship bash configuration
+export STARSHIP_CONFIG=~/.config/starship-bash.toml
 # starship
 eval "$(starship init bash)"

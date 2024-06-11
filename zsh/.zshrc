@@ -9,17 +9,19 @@
 # setopt PROMPT_SUBST
 # PS1='%F{yellow}%T%f %F{049}%n%f[%m] %1~ ${vcs_info_msg_0_}%# '
 
-# macOS
+# enable homebrew for macOS
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# linux
+# enable homebrew for linux
 if [[ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]] then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
-# starship prompt
+# starship zsh configuration
+export STARSHIP_CONFIG=~/.config/starship-zsh.toml
+# enable starship prompt
 eval "$(starship init zsh)"
 
 # history
