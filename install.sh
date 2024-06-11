@@ -19,6 +19,8 @@ os_name=$(uname -s)
 
 # on linux systems
 if [ "$os_name" == "Linux" ]; then
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  
   if [[ "$choice" == 'c' ]]; then
     brew bundle --file ./homebrew/linux-brewfile
   else
@@ -28,6 +30,8 @@ fi
 
 # on macOS systems
 if [ "$os_name" == "Darwin" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+
   if [[ "$choice" == 'c' ]]; then
     brew bundle --file ./homebrew/macos-brewfile
   else
