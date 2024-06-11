@@ -2,7 +2,8 @@
 # adapted from https://github.com/dreamsofautonomy/zensh/blob/main/.zshrc
 # and https://github.com/josean-dev/dev-environment-files/blob/main/.zshrc
 
-# backup shell prompt
+# OLD CUSTOM PROMPT -------------------------------------------------
+
 # autoload -Uz vcs_info
 # precmd() { vcs_info }
 # zstyle ':vcs_info:*' formats '%s(%F{yellow}%b%f) '
