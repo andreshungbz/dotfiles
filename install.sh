@@ -20,7 +20,7 @@ os_name=$(uname -s)
 # on linux systems
 if [ "$os_name" == "Linux" ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  
+
   if [[ "$choice" == 'c' ]]; then
     brew bundle --file ./homebrew/linux-brewfile
   else
@@ -59,3 +59,6 @@ if [ "$os_name" == "Darwin" ]; then
     stow --adopt */ && git restore .
   fi
 fi
+
+# link wakatime-cli to homebrew package for zsh
+mkdir ~/.wakatime && ln -s $(which wakatime-cli) ~/.wakatime/wakatime-cli 
