@@ -103,15 +103,11 @@ fi
 
 # ALIASES -----------------------------------------------------------
 
-# alert alias for long-running commands. usage $ sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
 # source alias
 alias src="source ~/.bashrc"
 
-# alias for giving all custom bin files execute permission
-source ~/dotfiles/functions.sh
-alias binex="exec_to_owner ~/bin && cd -"
+# common aliases
+source ~/common_aliases.sh
 
 # extra aliases
 

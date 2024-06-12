@@ -50,9 +50,8 @@ eval "$(zoxide init --cmd cd zsh)"
 # source alias
 alias src="source ~/.zshrc"
 
-# alias for giving all custom bin files execute permission
-source ~/dotfiles/functions.sh
-alias binex="exec_to_owner ~/bin && cd -"
+# common aliases
+source ~/common_aliases.sh
 
 # extra aliases
 if [ -f ~/.zsh_aliases ]; then
