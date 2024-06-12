@@ -60,6 +60,13 @@ if [ "$os_name" == "Darwin" ]; then
   fi
 fi
 
+# prompt for wakatime API key
+read -p "Enter wakatime API key: " wakatime_api_key
+
+# create wakatime.cfg file
+echo "[settings]" > ~/.wakatime.cfg
+echo "api_key=$wakatime_api_key" >> ~./wakatime.cfg
+
 # link wakatime-cli to homebrew package for zsh
 mkdir ~/.wakatime && ln -s $(which wakatime-cli) ~/.wakatime/wakatime-cli 
 
