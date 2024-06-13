@@ -12,15 +12,8 @@
 
 # MAIN --------------------------------------------------------------
 
-# enable homebrew for macOS and linux systems
-
-if [[ -f "/opt/homebrew/bin/brew" ]] then
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-
-if [[ -f "/home/linuxbrew/.linuxbrew/bin/brew" ]] then
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
+# common configurations
+source ~/dotfiles/etc/common.sh
 
 # enable starship prompt with zsh configuration
 export STARSHIP_CONFIG=~/.config/starship-zsh.toml
@@ -49,9 +42,6 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # source alias
 alias src="source ~/.zshrc"
-
-# common aliases
-source ~/common_aliases.sh
 
 # extra aliases
 if [ -f ~/.zsh_aliases ]; then
@@ -135,11 +125,3 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # OTHER -------------------------------------------------------------
-
-# load nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# paths
-export PATH=$PATH:$HOME/bin

@@ -22,9 +22,9 @@ if [ "$os_name" == "Linux" ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
   if [[ "$choice" == 'c' ]]; then
-    brew bundle --file ./homebrew/linux-brewfile
+    brew bundle --file ./etc/packages/homebrew/linux-backup
   else
-    brew bundle --file ./homebrew/linux-brewfile-min
+    brew bundle --file ./etc/packages/homebrew/linux-brewfile-min
   fi
 fi
 
@@ -33,7 +33,7 @@ if [ "$os_name" == "Darwin" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
   if [[ "$choice" == 'c' ]]; then
-    brew bundle --file ./homebrew/macos-brewfile
+    brew bundle --file ./etc/packages/homebrew/macos-brewfile
   else
     brew bundle --file ./homebrew/macos-brewfile-min
   fi
@@ -71,5 +71,5 @@ echo "api_key=$wakatime_api_key" >> ~./wakatime.cfg
 mkdir ~/.wakatime && ln -s $(which wakatime-cli) ~/.wakatime/wakatime-cli 
 
 # add execute permissions to bin files
-source ./functions.sh
+source ./etc/functions.sh
 exec_to_owner "~/bin"
