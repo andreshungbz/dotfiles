@@ -28,10 +28,13 @@ stow --adopt */ && git restore .
 
 # wakatime setup
 read -p "Enter wakatime API key: " wakatime_api_key
+rm -f ~/.wakatime.cfg
+touch ~/.wakatime.cfg
 echo "[settings]" > ~/.wakatime.cfg
-echo "api_key=$wakatime_api_key" >> ~./wakatime.cfg
+echo "api_key=$wakatime_api_key" >> ~/.wakatime.cfg
 # link wakatime-cli to homebrew package for zsh
-mkdir ~/.wakatime && ln -s $(which wakatime-cli) ~/.wakatime/wakatime-cli 
+rm -f ~/.wakatime/wakatime-cli
+mkdir -p ~/.wakatime && ln -s $(which wakatime-cli) ~/.wakatime/wakatime-cli 
 
 # add execute permissions to bin files
 source ./.etc/functions.sh
