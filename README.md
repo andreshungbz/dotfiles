@@ -10,7 +10,7 @@ On new systems of Linux and MacOS, the `install.sh` script automates installatio
 
 ## Requirements
 
-[`git`](https://git-scm.com/), [`curl`](https://curl.se/docs/manpage.html) and [`gcc`](https://gcc.gnu.org/)
+[`git`](https://git-scm.com/), [`curl`](https://curl.se/docs/manpage.html) and [`gcc`](https://gcc.gnu.org/) (download Xcode for MacOX)
 
 ## Installation
 
@@ -36,7 +36,7 @@ $ ./install.sh
 
 ## After Installing
 
-After the installation script is done. Restart the terminal and change the font as necessary.
+After the installation script is done, restart the terminal and change the font as necessary.
 
 A full restoration of a backup can be done with the corresponding package list located in `~/dotfiles/.etc/packages`. For example, on Linux systems, run the following command:
 
