@@ -37,5 +37,5 @@ rm -f ~/.wakatime/wakatime-cli
 mkdir -p ~/.wakatime && ln -s $(which wakatime-cli) ~/.wakatime/wakatime-cli 
 
 # add execute permissions to bin files
-source ./.etc/functions.sh
-exec_to_owner "~/bin"
+source ~/dotfiles/.etc/functions.sh
+exec_to_owner "$HOME/bin"
