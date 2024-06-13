@@ -1,32 +1,20 @@
 # dotfiles
 
-This dotfiles repository contains a number of configurations files and setup for Linux, MacOS, and Windows (mainly the former two) that can be replicated easily. On new Unix systems the `install.sh` script is used to automate setup. Dotfile management is done using `stow` and `git`.
+This dotfiles repository contains a number of configurations files, package lists and executable binaries that can easily and quickly replicated on systems. Dotfile management is done using `stow` and `git`.
 
-The following main programs are installed with additional packages being installed with Homebrew:
+Each visible directory corresponds to a package installed by `stow` that mirrors the structure from the home directory. The `.etc` directory contains extra files necessary for other files, such as common `bash` and `zsh` configurations and aliases. It also contains a `packages` directory that contains package lists for package managers for quick installation.
 
-- [Homebrew](https://brew.sh/)
-- [Starship Prompt](https://starship.rs/)
-- [Node Version Manager](https://github.com/nvm-sh/nvm)
+Custom binary files are also located in the `bin` directory.
 
-Configuration files are set for the following:
-
-- `bash`
-- `git`
-- `nvim`
-- `psql`
-- `starship`
-- `vim`
-- `zsh`
-
-Common user binary files are also included in the `~/bin` directory. Wakatime is also configured for `bash` and `zsh` tracking.
+On new systems of Linux and MacOS, the `install.sh` script automates installation with the minimal set of packages via Homebrew. Wakatime is also configured for `bash` and `zsh` tracking.
 
 ## Requirements
 
 [`git`](https://git-scm.com/) and [`curl`](https://curl.se/docs/manpage.html)
 
-## New Installation
+## Installation
 
-First, clone the repository in your home directory:
+First, clone the repository into the home directory:
 
 ```
 $ cd ~
@@ -40,12 +28,47 @@ $ cd dotfiles
 $ chmod u+x install.sh"
 ```
 
-Finally, run the installation script. This will overwrite the existing configuration files in the home directory that corresponds with the dotfiles in this repository. Enter through the prompts and lastly the wakatime API key.
+Finally, run the installation script. This will overwrite the existing configuration files in the home directory that corresponds with the dotfiles in this repository. The Wakatime API is prompted at the end.
 
 ```
-./install.sh
+$ ./install.sh
 ```
 
-## Updates and Management
+## After Installing
 
-Use the `stowpull` alias to pull changes from this repository and update any existing configurations. To add a new configuration file to track, create a corresponding directory and equivalent file in `dotfiles` and run `stow --adopt <package>` where `<package>` corresponds to the new directory. Afterwards commits and pushes can be made with `git`.
+A full restoration of a backup can be done with the corresponding package list located in `~/dotfiles/.etc/packages`. For example, on Linux systems, run the following command:
+
+```
+$ brew bundle --file=~/dotfiles/.etc/packages/homebrew/linux-backup
+```
+
+New binary files can quickly be made to be executable by running the following alias command:
+
+```
+$ binex
+```
+
+## Managing Dotfiles
+
+Use the `stowpull` alias to pull changes from this repository and update any existing configurations. This is an alias for:
+
+```
+$ git --git-dir=$HOME/dotfiles/.git pull
+$ cd ~/dotfiles && stow */
+```
+
+To adopt a new configuration to track, create a corresponding directory and equivalent file structure in `dotfiles` directory and run `stow --adopt <package>` where `<package>` corresponds to the new directory.
+
+To create a new configuration copied to the home directory, create a corresponding directory and equivalent file structure in `dotfiles` directory and run `stow <package>` where `<package>` corresponds to the new directory.
+
+Quickly stow all packages with the command:
+
+```
+$ stow */
+```
+
+If a configuration file already exists that conflicts with an existing file in the repository, it can quickly be replaced with the following command:
+
+```
+$ stow --adopt */ && git restore .
+```
