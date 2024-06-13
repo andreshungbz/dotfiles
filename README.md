@@ -4,7 +4,7 @@ This dotfiles repository contains a number of configurations files, package list
 
 Each visible directory corresponds to a package installed by `stow` that mirrors the structure from the home directory. The `.etc` directory contains extra files necessary for other files, such as common `bash` and `zsh` configurations and aliases. It also contains a `packages` directory that contains package lists for package managers for quick installation.
 
-Custom binary files are also located in the `bin` directory.
+Custom binary files are located in the `bin` directory.
 
 On new systems of Linux and MacOS, the `install.sh` script automates installation with the minimal set of packages via Homebrew. Wakatime is also configured for `bash` and `zsh` tracking.
 
