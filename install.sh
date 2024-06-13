@@ -1,7 +1,10 @@
 #!/bin/bash
 
-# install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+# install nvm if not already installed
+if [ ! -d "$HOME/.nvm" ]
+then
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+fi
 
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -15,6 +18,9 @@ os_name=$(uname -s)
 if [ "$os_name" == "Linux" ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   brew bundle --file ./.etc/packages/homebrew/linux-minimum
+
+  ln -sf /home/linuxbrew/.linuxbrew/share/fonts -t ~/.local/share
+  fc-cache -fv
 fi
 
 # on macOS systems
