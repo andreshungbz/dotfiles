@@ -1,5 +1,5 @@
 # alias for giving all custom bin files execute permission
-source ~/dotfiles/etc/functions.sh
+source ~/dotfiles/.extra/functions.sh
 alias binex="exec_to_owner ~/bin"
 
 # alias for quickly pulling dotfiles

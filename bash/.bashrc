@@ -54,7 +54,7 @@
 # MAIN --------------------------------------------------------------
 
 # common configurations
-source ~/dotfiles/etc/common.sh
+source ~/dotfiles/.etc/common.sh
 
 # enable starship prompt with zsh configuration
 export STARSHIP_CONFIG=~/.config/starship-bash.toml
@@ -78,19 +78,19 @@ shopt -s histverify
 shopt -s checkwinsize
 
 # wakatime for bash
-source ~/dotfiles/etc/wakatime-bash.sh
+source ~/dotfiles/.etc/wakatime-bash.sh
 
 # set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
+if [ -z "${debian_chroot:-}" ] && [ -r /extra/debian_chroot ]; then
+    debian_chroot=$(cat /extra/debian_chroot)
 fi
 
 # enable programmable completion features
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
+  elif [ -f /extra/bash_completion ]; then
+    . /extra/bash_completion
   fi
 fi
 

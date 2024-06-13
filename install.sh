@@ -14,13 +14,13 @@ os_name=$(uname -s)
 # on linux systems
 if [ "$os_name" == "Linux" ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-  brew bundle --file ./etc/packages/homebrew/linux-minimum
+  brew bundle --file ./.etc/packages/homebrew/linux-minimum
 fi
 
 # on macOS systems
 if [ "$os_name" == "Darwin" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
-  brew bundle --file ./etc/packages/homebrew/macos-minimum
+  brew bundle --file ./.etc/packages/homebrew/macos-minimum
 fi
 
 # run git stow
@@ -34,5 +34,5 @@ echo "api_key=$wakatime_api_key" >> ~./wakatime.cfg
 mkdir ~/.wakatime && ln -s $(which wakatime-cli) ~/.wakatime/wakatime-cli 
 
 # add execute permissions to bin files
-source ./etc/functions.sh
+source ./.etc/functions.sh
 exec_to_owner "~/bin"

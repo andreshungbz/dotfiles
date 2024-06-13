@@ -13,7 +13,7 @@
 # MAIN --------------------------------------------------------------
 
 # common configurations
-source ~/dotfiles/etc/common.sh
+source ~/dotfiles/.etc/common.sh
 
 # enable starship prompt with zsh configuration
 export STARSHIP_CONFIG=~/.config/starship-zsh.toml
@@ -43,7 +43,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # source alias
 alias src="source ~/.zshrc"
 
-# extra aliases
+# .extra aliases
 if [ -f ~/.zsh_aliases ]; then
         . ~/.zsh_aliases
 fi
