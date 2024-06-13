@@ -43,7 +43,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # source alias
 alias src="source ~/.zshrc"
 
-# .extra aliases
+# .etc aliases
 if [ -f ~/.zsh_aliases ]; then
         . ~/.zsh_aliases
 fi

@@ -13,7 +13,7 @@ fi
 export HOMEBREW_BUNDLE_NO_LOCK=1
 
 # common aliases
-source ~/dotfiles/.extra/aliases.sh
+source ~/dotfiles/.etc/aliases.sh
 
 # load nvm
 export NVM_DIR="$HOME/.nvm"
