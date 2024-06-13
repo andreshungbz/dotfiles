@@ -10,7 +10,7 @@ On new systems of Linux and MacOS, the `install.sh` script automates installatio
 
 ## Requirements
 
-[`git`](https://git-scm.com/) and [`curl`](https://curl.se/docs/manpage.html)
+[`git`](https://git-scm.com/), [`curl`](https://curl.se/docs/manpage.html) and [`gcc`](https://gcc.gnu.org/)
 
 ## Installation
 
