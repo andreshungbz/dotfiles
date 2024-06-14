@@ -1,25 +1,43 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "teamookla/speedtest"
+brew "antigen"
+brew "bat"
 brew "btop"
 brew "python@3.12"
 brew "cmake"
-brew "fastfetch"
+brew "dust"
+brew "eza"
+brew "fd"
 brew "ffmpeg"
 brew "fzf"
+brew "htop"
+brew "iproute2mac"
+brew "jupyterlab"
 brew "mas"
-brew "neovim"
+brew "neofetch"
+brew "postgresql@16", restart_service: true
+brew "pstree"
+brew "rhash"
+brew "starship"
 brew "stow"
 brew "tldr"
-brew "tree"
 brew "viu"
+brew "w3m"
+brew "wakatime-cli"
 brew "wget"
+brew "zoxide"
 brew "teamookla/speedtest/speedtest"
+cask "1kc-razer"
 cask "alt-tab"
+cask "anaconda"
+cask "appcleaner"
 cask "arc"
 cask "bruno"
-cask "clip-studio-paint"
+cask "canva"
+cask "chrome-remote-desktop-host"
 cask "coconutbattery"
+cask "crystalfetch"
 cask "dbngin"
 cask "discord"
 cask "docker"
@@ -27,6 +45,7 @@ cask "drawio"
 cask "figma"
 cask "firefox"
 cask "font-0xproto-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
 cask "gitkraken"
 cask "google-chrome"
 cask "google-drive"
@@ -47,6 +66,7 @@ cask "notion-calendar"
 cask "obs"
 cask "obsidian"
 cask "pgadmin4"
+cask "postman"
 cask "powershell"
 cask "protonvpn"
 cask "qbittorrent"
@@ -61,6 +81,7 @@ cask "visual-studio-code"
 cask "wakatime"
 cask "warp"
 cask "wireshark"
+cask "zed"
 cask "zoom"
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
@@ -71,9 +92,13 @@ mas "CotEditor", id: 1024640650
 mas "Developer", id: 640199958
 mas "Expenses", id: 1492055171
 mas "Goodnotes", id: 1444383602
+mas "Grammarly for Safari", id: 1462114288
 mas "Hidden Bar", id: 1452453066
+mas "LINE", id: 539883307
+mas "Lockera Widgets", id: 6466819847
 mas "Mactracker", id: 430255202
 mas "Pixelmator Pro", id: 1289583905
+mas "SPIKE", id: 6443545905
 mas "Telegram", id: 747648890
 mas "TestFlight", id: 899247664
 mas "The Camelizer", id: 1532579087
