@@ -35,7 +35,7 @@ setopt hist_find_no_dups
 # ALIASES -----------------------------------------------------------
 
 # eza ls alias
-alias ls="eza --icons=always"
+alias ls="eza --icons=always --color=always"
 
 # enable zoxide with cd alias
 eval "$(zoxide init --cmd cd zsh)"
