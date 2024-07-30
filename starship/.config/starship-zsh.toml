@@ -53,6 +53,11 @@ style_root = "fg:#ffffff bg:#0969da"
 format = '[$user ]($style)'
 disabled = false
 
+[hostname]
+ssh_only = true
+style = "fg:#ffffff bg:#8250df"
+format = "[$hostname ]($style)"
+
 [directory]
 style = "fg:#000000 bg:#eac54f"
 format = "[ $path ]($style)"
