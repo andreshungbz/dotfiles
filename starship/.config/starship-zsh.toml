@@ -2,8 +2,7 @@
 
 format = """
 [](fg:#0969da bg:#0969da)\
-$os\  
-[](fg:#0969da bg:#0969da)\ 
+$os\
 $username\
 [](fg:#0969da bg:#eac54f)\
 $directory\
@@ -21,30 +20,31 @@ $character
 """
 
 [os]
-disabled = false    
 style = "fg:#ffffff  bg:#0969da"
+format = "[$symbol ]($style)"
+disabled = false    
 
 [os.symbols]
-Windows = "󰍲 "
-Ubuntu = "󰕈 "
-SUSE = " "
-Raspbian = "󰐿 "
-Mint = "󰣭 "
-Macos = "󰀵 "
-Manjaro = " "
-Linux = "󰌽 "
-Gentoo = "󰣨 "
-Fedora = "󰣛 "
-Alpine = " "
-Amazon = " "
-Android = " "
-Arch = "󰣇 "
-Artix = "󰣇 "
-EndeavourOS = " "
-CentOS = " "
-Debian = "󰣚 "
-Redhat = "󱄛 "
-RedHatEnterprise = "󱄛 "
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
@@ -149,7 +149,7 @@ disabled = false
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "fg:#ffffff bg:#8250df"
-format = '[  $time ]($style)'
+format = '[   $time ]($style)'
 
 [cmd_duration]
 style = "fg:#000000 bg:yellow"
