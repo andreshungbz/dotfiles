@@ -1,26 +1,27 @@
 #                                 
 
 format = """
-[](fg:#0969da bg:#0969da)\
+[](fg:#078D70 bg:#078D70)\
 $os\
 $username\
-[](fg:#0969da bg:#eac54f)\
+[](fg:#078D70 bg:#26CEAA)\
 $directory\
-[](fg:#eac54f bg:#e44729)\
+[](fg:#26CEAA bg:#98E8C1)\
 $git_branch\
 $git_status\
-[ ](fg:#e44729)\
+[](fg:#98E8C1 bg:#7BADE2)\
+[ ](fg:#7BADE2)\
 """
 
 right_format = """
-[](fg:#8250df)\
+[](fg:#5049CC)\  
 $time\
 $all
 $character
 """
 
 [os]
-style = "fg:#ffffff  bg:#0969da"
+style = "fg:#ffffff  bg:#078D70"    
 format = "[$symbol ]($style)"
 disabled = false    
 
@@ -48,18 +49,18 @@ RedHatEnterprise = "󱄛"
 
 [username]
 show_always = true
-style_user = "fg:#ffffff bg:#0969da"
-style_root = "fg:#ffffff bg:#0969da"
+style_user = "fg:#ffffff bg:#078D70"
+style_root = "fg:#ffffff bg:#078D70"
 format = '[$user ]($style)'
 disabled = false
 
 [hostname]
 ssh_only = true
-style = "fg:#ffffff bg:#8250df"
+style = "fg:#ffffff bg:#078D70"
 format = "[$hostname ]($style)"
 
 [directory]
-style = "fg:#000000 bg:#eac54f"
+style = "fg:#000000 bg:#26CEAA"
 format = "[ $path ]($style)"
 disabled = false
 
@@ -71,12 +72,12 @@ disabled = false
 
 [git_branch]
 symbol = ""
-style = "fg:#ffffff bg:#e44729"
+style = "fg:#000000 bg:#98E8C1"
 format = '[ $symbol $branch ]($style)'
 disabled = false
 
 [git_status]
-style = "fg:#ffffff bg:#e44729"
+style = "fg:#000000 bg:#98E8C1"
 format = '[$all_status$ahead_behind ]($style)'
 disabled = false
 
@@ -153,7 +154,7 @@ disabled = false
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "fg:#ffffff bg:#8250df"
+style = "fg:#ffffff bg:#5049CC"
 format = '[   $time ]($style)'
 
 [cmd_duration]
