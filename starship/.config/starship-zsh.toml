@@ -54,11 +54,6 @@ style_root = "fg:#ffffff bg:#078D70"
 format = '[$user ]($style)'
 disabled = false
 
-[hostname]
-ssh_only = true
-style = "fg:#ffffff bg:#078D70"
-format = "[$hostname ]($style)"
-
 [directory]
 style = "fg:#000000 bg:#26CEAA"
 format = "[ $path ]($style)"
@@ -80,6 +75,11 @@ disabled = false
 style = "fg:#000000 bg:#98E8C1"
 format = '[$all_status$ahead_behind ]($style)'
 disabled = false
+
+[hostname]
+ssh_only = true
+style = "fg:#ffffff bg:#078D70"
+format = "[$hostname ]($style)"
 
 # Start languages and tools #
 
