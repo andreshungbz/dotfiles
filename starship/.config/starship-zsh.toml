@@ -78,7 +78,7 @@ disabled = false
 
 [hostname]
 ssh_only = true
-style = "fg:#ffffff bg:#078D70"
+style = "fg:#ffffff bg:#5049CC"
 format = "[$hostname ]($style)"
 
 # Start languages and tools #
