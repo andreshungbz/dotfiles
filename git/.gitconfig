@@ -5,7 +5,8 @@
 	email = andres.hung@outlook.com
 [core]
 	autocrlf = input
-	editor = vim
+  editor = vim
+  pager = delta
 [pull]
 	rebase = false
 [alias]
