@@ -126,8 +126,5 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # OTHER -------------------------------------------------------------
 
-<<<<<<< HEAD
-=======
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
->>>>>>> 0e68b4fee56c9c33bb955a6e9cf5b6054c76db7d
