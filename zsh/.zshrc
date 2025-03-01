@@ -126,5 +126,6 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # OTHER -------------------------------------------------------------
 
-export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
+export VCPKG_ROOT="$HOME/vcpkg"
