@@ -1,7 +1,12 @@
 #!/bin/bash
+set -e
 
 # Homebrew Package Manager
 # https://brew.sh/
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.zshrc
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-brew bundle --file ./packages/brew
+brew bundle --file ./packages/Brewfile
+brew --version
